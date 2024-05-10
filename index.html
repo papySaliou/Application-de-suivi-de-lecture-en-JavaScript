@@ -1,67 +1,38 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionnaire de livres</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="title-content">
-            <h2>GESTION DE LIVRE : <span class="count"></span></h2>
-            <button id="addBooksModalBtn" type="button">AJOUTER UN LIVRE</button>
-        </div>
 
-        <!-- le modal -->
-        <div class="modal" id="contactModal">
-            <div class="modal-content">
-                <span class="close" >X</span>
-                <div class="form">
-                    <form method="post">
-                        <label for="name">Titre : </label>
-                        <input class="form-input" type="text" id="name" name="name"/>
-                        <label for="auteur">Auteur : </label>
-                        <input class="form-input" type="text" id="auteur" name="auteur"/>
-                        <button type="submit" class="addContactBtn" id="action">AJOUTER </button>
-                    </form>
-                </div>
-            </div>
-        </div>
+  <section class="container">
 
-        <div class="livres">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>TITRE</th>
-                        <th>AUTEUR</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <!-- <tbody>
-                    <tr>
-                        <td>Saliou Diouf</td>
-                        <td>dioufsaliou@gmail.com</td>
-                        <td>789651234</td>
-                        <td >
-                            <button class="deleteBtn" id="action">SUPPRIMER</button>
-                            <button class="readBtn" id="action">LU</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Saliou Diouf</td>
-                        <td>dioufsaliou@gmail.com</td>
-                        <td>789651234</td>
-                        <td >
-                            <button class="deleteBtn" id="action">SUPPRIMER</button>
-                            <button class="readBtn" id="action">LU</button>
-                        </td>
-                    </tr>
-                </tbody> -->
-            </table>
-        </div>
+  <div class="header">
+    <h1 class="titre" id="titre">Bienvenu sur votre Librairie en ligne !</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti inventore neque,
+         pariatur commodi animi consequatur excepturi quod omnis aut nulla,
+          nam tenetur cumque atque officia error, laudantium soluta incidunt.</p>
+</div>
+  <button id="add-book-btn">Ajouter un livre</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <input type="text" id="book-title" placeholder="Titre du livre">
+      <input type="text" id="book-author" placeholder="Auteur du livre">
+      <button id="save-book-btn">Enregistrer</button>
     </div>
-    <script src="/script.js"></script>
+  </div>
+  
+  <ul id="book-list"></ul>
+  </section>
+
+  <script src="script1.js"></script>
 </body>
 </html>
