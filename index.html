@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionnaire de livres</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section class="container">
+
+  <div class="header">
+    <h1 class="titre" id="titre">Bienvenu sur votre Librairie en ligne !</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti inventore neque,
+         pariatur commodi animi consequatur excepturi quod omnis aut nulla,
+          nam tenetur cumque atque officia error, laudantium soluta incidunt.</p>
+</div>
+  <button id="add-book-btn">Ajouter un livre</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <input type="text" id="book-title" placeholder="Titre du livre">
+      <input type="text" id="book-author" placeholder="Auteur du livre">
+      <button id="save-book-btn">Enregistrer</button>
+    </div>
+  </div>
+  
+  <ul id="book-list"></ul>
+  </section>
+
+  <script src="script1.js"></script>
+</body>
+</html>
