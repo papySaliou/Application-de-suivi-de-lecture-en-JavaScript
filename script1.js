@@ -12,16 +12,16 @@ function generateUniqueId() {
   
   // Fonction pour ajouter un livre
   function addBook(title, author) {
-    var livresEnregistrerJSON = localStorage.getItem('books');
-    var livresEnregistrer = [];
+    let livresEnregistrerJSON = localStorage.getItem('books');
+    let livresEnregistrer = [];
   
     if (livresEnregistrerJSON) {
       livresEnregistrer = JSON.parse(livresEnregistrerJSON);
     }
   
-    var id = generateUniqueId();
+    let id = generateUniqueId();
   
-    var newBook = {
+    let newBook = {
       id: id,
       title: title,
       author: author,
@@ -40,8 +40,8 @@ function generateUniqueId() {
   
   // Fonction pour supprimer un livre
   function deleteBook(id) {
-    var livresEnregistrerJSON = localStorage.getItem('books');
-    var livresEnregistrer = [];
+    let livresEnregistrerJSON = localStorage.getItem('books');
+    let livresEnregistrer = [];
   
     if (livresEnregistrerJSON) {
       livresEnregistrer = JSON.parse(livresEnregistrerJSON);
@@ -57,8 +57,8 @@ function generateUniqueId() {
   
   // Fonction pour marquer un livre comme lu
   function markAsRead(id) {
-    var livresEnregistrerJSON = localStorage.getItem('books');
-    var livresEnregistrer = [];
+    let livresEnregistrerJSON = localStorage.getItem('books');
+    let livresEnregistrer = [];
   
     if (livresEnregistrerJSON) {
       livresEnregistrer = JSON.parse(livresEnregistrerJSON);
@@ -76,19 +76,19 @@ function generateUniqueId() {
   
   // Fonction pour afficher la liste des livres
   function displayBooks() {
-    var bookList = document.getElementById('book-list');
+    let bookList = document.getElementById('book-list');
     bookList.innerHTML = '';
   
-    var livresEnregistrerJSON = localStorage.getItem('books');
-    var livresEnregistrer = [];
+    let livresEnregistrerJSON = localStorage.getItem('books');
+    let livresEnregistrer = [];
   
     if (livresEnregistrerJSON) {
       livresEnregistrer = JSON.parse(livresEnregistrerJSON);
     }
   
     livresEnregistrer.forEach(function(book) {
-      var li = document.createElement('li');
-      var titleClass = book.read ? 'book-read' : '';
+      let li = document.createElement('li');
+      let titleClass = book.read ? 'book-read' : '';
       li.innerHTML = '<span class="' + titleClass + '">' + book.title + ' - ' + book.author + '</span>' + 
                      '<button onclick="markAsRead(\'' + book.id + '\')">Marquer comme lu</button>' +
                      '<button onclick="deleteBook(\'' + book.id + '\')">Supprimer</button>' +
@@ -118,8 +118,8 @@ let modal= document.querySelector(".modal");
   
   // Fonction pour enregistrer un nouveau livre
   document.getElementById('save-book-btn').addEventListener('click', function() {
-    var title = document.getElementById('book-title').value;
-    var author = document.getElementById('book-author').value;
+    let title = document.getElementById('book-title').value;
+    let author = document.getElementById('book-author').value;
     
     addBook(title, author);
     document.getElementById('modal').style.display = 'none';
