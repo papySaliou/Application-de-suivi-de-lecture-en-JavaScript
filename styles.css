@@ -18,6 +18,11 @@
     width: 80%;
   }
   
+  p{
+    text-align: center;
+    align-items: center;
+    margin: 0 15%;
+  }
   .close {
     color: #aaa;
     float: right;
