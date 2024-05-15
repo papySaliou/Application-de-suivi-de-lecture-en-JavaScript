@@ -130,6 +130,10 @@
   justify-content: space-between;
   margin: 0 15%;
 }
+.tableau li{
+  font-size: 20px;
+  font-weight: bold;
+}
 .tableau ul{
   justify-content: space-between;
   /* border: 1px solid black; */
@@ -149,4 +153,7 @@
   height: 30px;
   justify-content: center;
   justify-items: center;
+}
+span{
+  margin: 0 20px;
 }
