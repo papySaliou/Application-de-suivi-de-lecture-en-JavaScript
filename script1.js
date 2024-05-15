@@ -89,10 +89,10 @@ function generateUniqueId() {
     livresEnregistrer.forEach(function(book) {
       let li = document.createElement('li');
       let titleClass = book.read ? 'book-read' : '';
-      li.innerHTML = '<span class="' + titleClass + '">' + book.title + ' - ' + book.author + '</span>' + 
+      li.innerHTML = '<span> ' + book.id + '</span>' + '<span class="' + titleClass + '">' + book.title + ' - ' + book.author + '</span>' + 
                      '<button onclick="markAsRead(\'' + book.id + '\')">Marquer comme lu</button>' +
-                     '<button onclick="deleteBook(\'' + book.id + '\')">Supprimer</button>' +
-                     '<span>ID: ' + book.id + '</span>';
+                     '<button onclick="deleteBook(\'' + book.id + '\')">Supprimer</button>' 
+                     ;
       bookList.appendChild(li);
     });
   }
